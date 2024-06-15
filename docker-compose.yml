@@ -1,0 +1,32 @@
+version: '3.0'
+
+services:
+  frontend:
+    image: mse2024-forum-fe:latest
+    container_name: frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+
+  backend:
+    image: mse2024-forum-be:latest
+    container_name: backend
+    ports:
+      - "7211:8080"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres 
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
