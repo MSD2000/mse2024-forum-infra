@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGES="msd2000/mse2024-forum-fe:latest"
+IMAGES="msd2000/mse2024-forum-be:latest msd2000/mse2024-forum-fe:latest"
 
 echo "Removing specified Docker images..."
 for IMAGE in $IMAGES; do
