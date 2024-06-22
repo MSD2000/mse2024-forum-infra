@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   frontend:
-    image: mse2024-forum-fe:latest
+    image: msd2000/mse2024-forum-fe:latest
     container_name: frontend
     ports:
       - "8081:8081"
@@ -10,7 +10,7 @@ services:
       - backend
 
   backend:
-    image: mse2024-forum-be:latest
+    image: msd2000/mse2024-forum-be:latest
     container_name: backend
     ports:
       - "8080:8080"
