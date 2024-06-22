@@ -5,7 +5,7 @@ services:
     image: mse2024-forum-fe:latest
     container_name: frontend
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       - backend
 
@@ -13,7 +13,7 @@ services:
     image: mse2024-forum-be:latest
     container_name: backend
     ports:
-      - "7211:8080"
+      - "8080:8080"
     depends_on:
       - postgres
 
